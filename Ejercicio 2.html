@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+</head>
+
+<body>
+	<script>
+        // Initialize an array of numbers
+        const numeros = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
+
+        // Initialize a variable to store the largest number
+        let numeroMayor = numeros[0];
+
+        // Iterate through the array of numbers
+        for (let i = 1; i < numeros.length; i++) {
+            // If the current number is greater than the largest number
+            if (numeros[i] > numeroMayor) {
+                // Update the largest number
+                numeroMayor = numeros[i];
+            }
+        }
+
+        // Log the largest number to the console
+        console.log("El número mayor es:", numeroMayor);
+	</script>
+
+</body>
+
+</html>
