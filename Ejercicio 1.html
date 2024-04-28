@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Medio de transporte</title>
 </head>
 <body>
     <h1>Determinar medio de transporte</h1>
     <p>Ingresa la distancia en metros:</p>
     <input type="number" id="distancia" min="0">
-    <button onclick="determinarMedioDeTransporte()">Determinar</button>
+    <button onclick="trasporte()">Determinar</button>
     <p id="resultado"></p>
 
     <script>
-        function determinarMedioDeTransporte() {
+        function trasporte() {
             const distancia = document.getElementById("distancia").value;
-            let medioDeTransporte;
+            let trasporte;
 
             if (distancia >= 0 && distancia <= 1000) {
-                medioDeTransporte = "pie";
+                trasporte = "pie";
             } else if (distancia > 1000 && distancia <= 10000) {
-                medioDeTransporte = "bicicleta";
+                trasporte = "bicicleta";
             } else if (distancia > 10000 && distancia <= 30000) {
-                medioDeTransporte = "colectivo";
+                trasporte = "colectivo";
             } else if (distancia > 30000 && distancia <= 100000) {
-                medioDeTransporte = "auto";
+                trasporte = "auto";
             } else if (distancia > 100000) {
-                medioDeTransporte = "avión";
+                trasporte = "avión";
             } else {
-                medioDeTransporte = "Distancia inválida";
+                trasporte = "Distancia inválida";
             }
 
-            document.getElementById("resultado").innerText = `El medio de transporte apropiado es: ${medioDeTransporte}`;
+            document.getElementById("resultado").innerText = `El medio de transporte apropiado es: ${trasporte}`;
         }
     </script>
 </body>
